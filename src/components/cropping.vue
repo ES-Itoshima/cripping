@@ -69,11 +69,11 @@ const props = defineProps({
   },
   width: {
     type: Number,
-    default: 400
+    default: 1000
   },
   height: {
     type: Number,
-    default: 300
+    default: 600
   }
 })
 
@@ -147,7 +147,6 @@ const downloadImage = () => {
 const downloadCoordinates = () => {
   if (cropCoordinates.value) {
     const coordinatesText = `クリッピング座標情報:
-画像URL: ${currentImageUrl.value}
 開始座標 (X1, Y1): (${Math.round(cropCoordinates.value.x1)}, ${Math.round(cropCoordinates.value.y1)})
 終了座標 (X2, Y2): (${Math.round(cropCoordinates.value.x2)}, ${Math.round(cropCoordinates.value.y2)})
 クロップサイズ: ${Math.round(cropCoordinates.value.x2 - cropCoordinates.value.x1)}px × ${Math.round(cropCoordinates.value.y2 - cropCoordinates.value.y1)}px
